@@ -1,0 +1,15 @@
+---
+dataset_name: This is not a dataset
+in_article: No
+category: AS
+year_publication: 2024
+year_recordings: 2022/2023
+volume: 999M images, 999M km2
+data: Aerial RGB, SAR, Multispectral
+resolution: 2cm, 10m, 10m
+time_series: No
+potential_tasks: Seg.
+nb_classes: 99
+location: Canada, Brazil, France, China, Australia
+url: https://www.google.fr, https://www.google.com
+license: CC-BY-4.0
