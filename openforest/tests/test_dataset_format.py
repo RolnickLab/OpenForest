@@ -88,13 +88,24 @@ def test_time_series(new_dataset):
             assert is_time_series == False, "The time_series attribute should be set to 'No' or 'False'"
 
 def test_potential_tasks(new_dataset):
-    task_list = ['Classif.', 'Seg.', 'OD']
-    # TDB: set list of tasks
-    pass
+    # This list should be updated if a new task is introduced
+    task_list = ['Align.', 'CD', 'Classif.', 'IS', 'KD', 'MC', 'OD', 'OL', 'Reg.', 'Seg.']
+    tasks = new_dataset['potential_tasks'].split(', ')
+    for task in tasks:
+        assert task in task_list
 
 def test_nb_classes(new_dataset):
-    # TBD: depend on the task to solve. Should be N/A is no classif / seg ...
-    pass
+    nb_classes = new_dataset['nb_classes']
+    tasks = new_dataset['potential_tasks'].split(', ')
+    is_classif = False
+    for task in tasks:
+        if task in ['Classif.', 'Seg.', 'OD', 'IS', 'MC']: # Note this list can change
+            # Note that text can be included in this column
+            # It cannot be tested with integer values.
+            assert nb_classes != 'N/A', 'Regarding the potential_tasks attribute, a number of classes should be mentioned'
+            is_classif = True
+    if is_classif == False:
+        assert nb_classes == 'N/A', "Regarding the potential_tasks attribute, the number of classes should be set to 'N/A'"
 
 def test_location(new_dataset):
     # TODO: be less restrictive in case location are not in the list
