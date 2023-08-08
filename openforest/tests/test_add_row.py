@@ -1,5 +1,5 @@
 """
-pytest --dataset_name='PULL_REQUEST_TEMPLATE.yml' test_merge.py
+pytest --dataset_name='PULL_REQUEST_TEMPLATE.yml' test_add_row.py
 """
 import yaml
 import pandas as pd
@@ -7,6 +7,7 @@ import pytest
 from pytest import fixture
 
 from openforest.utils import OPENFOREST_HOME
+from openforest.scripts.openforest_database import OpenForestDatabase
 
 @fixture
 def new_dataset(dataset_name):
@@ -38,3 +39,11 @@ def test_merging(new_dataset):
     except:
         print('Error merging the new dataset with OpenForest.')
     assert len(updated_openforest) == len(openforest)+1
+
+def test_add_row(new_dataset):
+    new_dataset_name = new_dataset['dataset_name']
+    openforest = OpenForestDatabase()
+    init_len_openforest = len(openforest)
+    openforest.add_row(new_dataset)
+    assert len(openforest) == init_len_openforest+1
+    assert new_dataset_name in list(openforest.get.index)

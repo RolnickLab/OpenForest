@@ -1,0 +1,15 @@
+---
+dataset_name: Cactus Aerial Photos
+in_article: Yes
+category: A
+year_publication: 2019
+year_recordings: Unknown
+volume: 21k samples
+data: Aerial RGB
+resolution: Unknown
+time_series: No
+potential_tasks: Classif.
+nb_classes: 2
+location: Mexico
+url: https://www.kaggle.com/datasets/irvingvasquez/cactus-aerial-photos
+license: GPL 2

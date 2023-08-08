@@ -53,8 +53,11 @@ def test_year_recordings(new_dataset):
         recording_years = recording_years.split('/')
         for _, years in enumerate(recording_years):
             years = years.split('-')
-            assert len(years[0]) == 4, 'Year of publication is not in the correct format.'
-            assert 1970 <= int(years[0]) <= datetime.today().year, 'Year of publication is not valid.'
+            try:
+                assert 1970 <= int(years[0]) <= datetime.today().year, 'Year of publication is not valid.'
+                assert len(years[0]) == 4, 'Year of publication is not in the correct format.'
+            except ValueError:
+                assert str(recording_years[0]).lower() == 'unknown', 'Year of publication is not in the correct format.'
             if len(years) > 1:
                 assert len(years[1]) == 4, 'Year of publication is not in the correct format.'
                 assert 1970 <= int(years[1]) <= datetime.today().year, 'Year of publication is not valid.'
@@ -116,6 +119,8 @@ def test_location(new_dataset):
         assert 0 in checker, 'The provided location: {} is not in the GeoPandas world country list'.format(location)
 
 def test_url(new_dataset):
+    url = new_dataset['url']
+    assert len(url) > 8, 'The url cannot be empty, please fill the entire url to access the dataset.'
     # TODO: tests TDB
     pass
 
