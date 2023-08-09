@@ -43,6 +43,8 @@ def test_merging(new_dataset):
 def test_add_row(new_dataset):
     new_dataset_name = new_dataset['dataset_name']
     openforest = OpenForestDatabase()
+    assert new_dataset_name not in list(openforest.get.index), 'The name of the new dataset already exists in OpenForest. '\
+        'Please change it in your YAML file.'
     init_len_openforest = len(openforest)
     openforest.add_row(new_dataset)
     assert len(openforest) == init_len_openforest+1

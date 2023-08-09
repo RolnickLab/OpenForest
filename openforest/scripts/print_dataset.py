@@ -10,8 +10,9 @@ def main():
     args = get_dataset_name()
     dataset_name = args['dataset_name']
     database = OpenForestDatabase()
-    database.delete_row(dataset_name)
-    database.erase
+    database.print_row(dataset_name)
+    database.print_url(dataset_name)
+
 
 if __name__ == '__main__':
     main()

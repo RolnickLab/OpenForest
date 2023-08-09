@@ -11,6 +11,7 @@ from openforest.scripts.openforest_database import OpenForestDatabase
 
 @fixture
 def get_dataset_name(dataset_name):
+    print(dataset_name)
     return dataset_name
 
 def test_delete_row(get_dataset_name):

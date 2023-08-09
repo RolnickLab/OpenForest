@@ -4,7 +4,7 @@ import pandas as pd
 
 from openforest.scripts.openforest_database import OpenForestDatabase
 from openforest.utils import OPENFOREST_HOME
-from openforest.utils.functions import get_dataset_name, load_dataset_file
+from openforest.utils.functions import get_dataset_file, load_dataset_file
 
 def main():
     args = get_dataset_file()

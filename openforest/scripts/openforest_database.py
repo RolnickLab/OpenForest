@@ -34,7 +34,8 @@ class OpenForestDatabase:
             print(self.database)
 
     def print_url(self, dataset_name):
-        print(self.database.loc[dataset_name]['url'])
+        print("URL(s) to access the '{}' dataset: {}.".format(dataset_name,
+                                                              self.database.loc[dataset_name]['url']))
 
     @property
     def erase(self):
