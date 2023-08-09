@@ -1,5 +1,5 @@
 """
-pytest --dataset_name='test_dataset_example.yml' test_modify_row.py
+pytest --dataset_file='test_dataset_example.yml' test_modify_row.py
 """
 import yaml
 import pandas as pd

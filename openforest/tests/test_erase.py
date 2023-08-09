@@ -1,5 +1,5 @@
 """
-pytest --dataset_name='PULL_REQUEST_TEMPLATE.yml' test_erase.py
+pytest --dataset_file='PULL_REQUEST_TEMPLATE.yml' test_erase.py
 
 Note that this test will not be run at each commit.
 It's only to test the class method
@@ -13,8 +13,8 @@ from openforest.utils import OPENFOREST_HOME
 from openforest.scripts.openforest_database import OpenForestDatabase
 
 @fixture
-def new_dataset(dataset_name):
-    path = OPENFOREST_HOME / dataset_name
+def new_dataset(dataset_file):
+    path = OPENFOREST_HOME / dataset_file
     with open(path, 'r') as stream:
         try:
             dataset_file = yaml.safe_load(stream)

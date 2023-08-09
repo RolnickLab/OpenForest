@@ -7,4 +7,4 @@ fi
 
 echo "Path to the YAML dataset file -> " $1
 
-pytest --dataset_name=$1 tests/test_dataset_format.py && pytest --dataset_name=$1 tests/test_add_row.py
+pytest --dataset_file=$1 tests/test_dataset_format.py && pytest --dataset_file=$1 tests/test_add_row.py

@@ -1,5 +1,5 @@
 """
-pytest --dataset_name='PULL_REQUEST_TEMPLATE.yml' test_dataset_format.py
+pytest --dataset_file='PULL_REQUEST_TEMPLATE.yml' test_dataset_format.py
 """
 import yaml
 import pandas as pd
@@ -11,8 +11,8 @@ from datetime import datetime
 from openforest.utils import OPENFOREST_HOME
 
 @fixture
-def new_dataset(dataset_name):
-    path = OPENFOREST_HOME / dataset_name
+def new_dataset(dataset_file):
+    path = OPENFOREST_HOME / dataset_file
     with open(path, 'r') as stream:
         try:
             dataset_file = yaml.safe_load(stream)
