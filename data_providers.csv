@@ -1,0 +1,23 @@
+Name,Url,Description
+NICFI,https://university.planet.com/page/nicfi,Norway’s International Climate and Forest Initiative (NICFI): 5m resolution multispectral.
+INPE,http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes,"Brazilian National Institute for Space Research National Institute for Space Research (INPE): multispectral data at 20/30m resolution and delivers official annual rates of forest loss for Brazil (1988-2021). The publicly available annual maps are all corrected/edited manually by experts and contain polygons with the following labels: forest, non-forest, deforestation of the year, previous deforestation, clouds, and water."
+IGN,https://geoservices.ign.fr/lidarhd,Lidar HD: 3D topography of the aboveground of France. They give access to 50x50km square areas with 1x1km tiles. Points are classified into 11 classes including high middle and low level vegetation.
+CEO,https://app.collect.earth/,"Collect Earth Online (CEO): collect high resolution satelitte imagery fore forest land cover. Tens for locations all around the world, no annotations but the access is free and open source."
+Global Forest Watch,https://data.globalforestwatch.org/,Global Forest Watch: more details to come (lots of different source of data).
+EFISCEN,https://efi.int/knowledge/models/efiscen/inventory,"EFISCEN: a large database of forest inventories in 32 European countries, from forest to tree level."
+Opendrop,https://opendrop.de/,Citizen science-based UAV data
+Openaerialmap,https://openaerialmap.org/,Citizen science-based UAV data
+Geonadir,https://geonadir.com/,Citizen science-based UAV data
+iNaturalist,https://www.inaturalist.org/,iNaturalist: Citizen community recording and manually labeling images or automatically provide a label 
+NEON,https://www.neonscience.org/,NEON: large scale data provider in the US
+Gbif,https://www.gbif.org/,TBD
+Forest information system for europe,https://forest.eea.europa.eu/datacatalogue,TBD
+OpenTrees,http://opentrees.org/,TBD
+TRY plant trait database,https://www.try-db.org/TryWeb/Home.php,
+BIEN,https://bien.nceas.ucsb.edu/bien/,Botanical information and ecology network
+ForetOuverte,https://www.foretouverte.gouv.qc.ca/,Forest inventories in Québec
+ForestResearch,https://www.forestresearch.gov.uk/tools-and-resources/national-forest-inventory/,Forest inventories in Great Britain
+FIA,https://www.fia.fs.usda.gov/,US Forest Inventory Analysis
+MODIS/VIIR,https://firms.modaps.eosdis.nasa.gov/,Fire forest data in US / Canda using MODIS and VIIRS
+Mapbiomas,https://brasil.mapbiomas.org/en/collection-release,Mapbiomas Brasil is a platform to download land use and land cover maps
+ForestGeo,https://forestgeo.si.edu/,"Forest Global Earth Observatory (ForestGEO), data portal where network partners can login and enter, review, and download their data and other researchers can request access to any dataset"
