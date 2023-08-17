@@ -39,7 +39,7 @@ class OpenForestDatabase:
 
     @property
     def erase(self):
-        self.database.to_csv(OPENFOREST_HOME.parent / 'OpenForest_test.csv')
+        self.database.to_csv(OPENFOREST_HOME.parent / 'OpenForest.csv')
     
     @property
     def get(self):

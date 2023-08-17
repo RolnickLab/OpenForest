@@ -6,7 +6,7 @@ year_publication: 2024
 year_recordings: 1995-2010/2021/2022/2023
 volume: 999M images, 999M km2
 data: Aerial RGB, SAR, Multispectral
-resolution: 2cm, 10m, 10m
+spatial_resolution_or_precision: 2cm, 10m, 10m
 time_series: Yes
 potential_tasks: Seg., Classif.
 nb_classes: 99

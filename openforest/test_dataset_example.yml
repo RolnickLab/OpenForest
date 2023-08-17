@@ -6,7 +6,7 @@ year_publication: 2019
 year_recordings: Unknown
 volume: 21k samples
 data: Aerial RGB
-resolution: Unknown
+spatial_resolution_or_precision: Unknown
 time_series: No
 potential_tasks: Classif.
 nb_classes: 2

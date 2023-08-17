@@ -71,7 +71,7 @@ def test_data_resolution(new_dataset):
     dataset = pd.DataFrame([new_dataset])
     dataset.set_index('dataset_name', inplace=True)
     modalities = dataset['data'].str.split(', ')
-    resolutions = dataset['resolution'].str.split(', ')
+    resolutions = dataset['spatial_resolution_or_precision'].str.split(', ')
     assert len(modalities) == len(resolutions), 'Each data modality should be associated to a resolution. '\
         'Please refer to the template and the README of the repo.'
 
@@ -111,12 +111,14 @@ def test_nb_classes(new_dataset):
         assert nb_classes == 'N/A', "Regarding the potential_tasks attribute, the number of classes should be set to 'N/A'"
 
 def test_location(new_dataset):
-    # TODO: be less restrictive in case location are not in the list
+    exceptions = ['Worldwide', 'Europe', 'Africa', 'North America', 'South America', 'Central America',
+                  'America', 'Asia', 'Oceania']
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
     locations = new_dataset['location'].split(', ')
     for location in locations:
-        checker = world.name.str.find(location).unique()
-        assert 0 in checker, 'The provided location: {} is not in the GeoPandas world country list'.format(location)
+        if location not in exceptions:
+            checker = world.name.str.find(location).unique()
+            assert 0 in checker, 'The provided location: {} is not in the GeoPandas world country list'.format(location)
 
 def test_url(new_dataset):
     url = new_dataset['url']
