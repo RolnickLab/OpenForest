@@ -3,7 +3,7 @@
 ![openforest_logo](./images/logo_wo_background.png)
 
 OpenForest is an initiative to centralize open source forest monitoring dataset. This repository is open to contributions.
-It has been motivated by our work **OpenForest: review and challenges of open source forests datasets** (link will be provided soon).
+It has been motivated by our work **OpenForest: A data catalogue for machine learning in forest monitoring** (link will be provided soon).
 
 Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera which are discussed in the corresponding article. If you want to add a new dataset, please ensure that it follows the same criteria before proceeding to the next stage.
 
@@ -14,7 +14,7 @@ Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera
 - The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra, root scans, dendro computer tomography)
 - The dataset should contained at least $O(1000)$ trees.
 
-The OpenForest database is available in this repo [here](./OpenForest.csv).
+The OpenForest catalogue is available in this repo [here](./OpenForest.csv).
 
 ---
 
@@ -51,7 +51,7 @@ $ cp openforest/PULL_REQUEST_TEMPLATE.yml openforest/NEW_DATASET.yml
 - `year_recordings`: indicate each year of data recording separated by `/`, *e.g.* `2019/2020`. If you want to indicate a time series, separate the two date bounds by `-`, *e.g.* `2010-2020`. You can include both time series and single dates such as `2009/2010-2020/2021`. Note that `Unknown` is a valid entry if the recording date is not available.
 -`volume`: TODO
 - `data`: TODO
-- `resolution`: TODO
+- `spatial_resolution_or_precision`: TODO
 - `time_series`: TODO
 - `potential_tasks`: TODO
 - `nb_classes`: TODO
@@ -73,7 +73,7 @@ $ git checkout -b my-branch
 
 5. Update OpenForest with your new dataset and delete your YAML file after verifying that the update has been correctly done:
 ```bash
-$ python3 scripts/add_new_dataset.py --dataset_name='NEW_DATASET.yml'
+$ python3 scripts/add_new_dataset.py --dataset_file='NEW_DATASET.yml'
 $ rm NEW_DATASET.yml
 ```
 
@@ -140,12 +140,18 @@ $ git push origin my-branch
 ```
 Create a new Pull Request on the Github webpage of the repo. It will be validated and merged to the main branch as soon as possible if it fits the requirements and passes the tests.
 
+---
+
+## How to add, modify or delete a data provider?
+
+**This section is under construction**
 
 ---
 
 #### To-do list
 
-- [ ] Add another database for forest data providers.
+- [X] Add another database for forest data providers.
+- [ ] Write tests and script to add, modify and delete data providers (+ associated doc)
 - [ ] Add a Python counter to display the current number of datasets in the README.
 - [ ] Add a Python function to integrate a dynamic visualization of the geographic distribution of the datasets.
 - [ ] Integrate Travis or CircleCI for automatic test running.
