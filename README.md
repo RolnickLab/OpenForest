@@ -11,7 +11,7 @@ Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera
 - The dataset should be related to at least one published article, exceptions have been made for datasets that are available as preprints, but are considered to be must-see datasets;
 - The dataset should be focused on the composition of the forest, excluding event-based specific ones (*i.e.* wildfires detection);
 - A land use and/or land cover (LULC) dataset should contain more than a single plant functional type (*i.e.* conifers or deciduous) since a focus is made on better understanding the composition of the forest;
-- The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra, root scans, dendro computer tomography)
+- The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra or root scans)
 - The dataset should contained at least $O(1000)$ trees.
 
 The OpenForest catalogue is available in this repo [here](./OpenForest.csv).
@@ -45,19 +45,19 @@ $ cp openforest/PULL_REQUEST_TEMPLATE.yml openforest/NEW_DATASET.yml
 
 2. Edit the dataset file as you want while respecting the following typos for each attribute:
 - `dataset_name`: name of your dataset, ensure that it is not already existing.
-- `in_article`: if your dataset is not part of our main article, set it to `No` or `False`.
+- `article_url`: indicate the url to the article associated to your dataset. If your dataset is included in our initial work and thus accessible in our article, this attribute will be set to `False`.
 - `category`: depending on the modality available in your dataset, please indicate one or several letters as following: `I` for inventories, `G` for ground-based recordings, `A` for aerial recordings, `S` for satellite recordings, `M` for maps. For more information, please refer to our article.
 - `year_publication`: indicate the year of the associated publication or preprint release.
 - `year_recordings`: indicate each year of data recording separated by `/`, *e.g.* `2019/2020`. If you want to indicate a time series, separate the two date bounds by `-`, *e.g.* `2010-2020`. You can include both time series and single dates such as `2009/2010-2020/2021`. Note that `Unknown` is a valid entry if the recording date is not available.
-- `dataset_size`: TODO
-- `data`: TODO
-- `spatial_resolution_or_precision`: TODO
-- `time_series`: TODO
-- `potential_tasks`: TODO
-- `nb_classes`: TODO
-- `location`: TODO
-- `url`: TODO
-- `license`: TODO
+- `dataset_size`: depending on the modalities available in the dataset, please indicate the number of trees, number of samples, number of maps with the appropriate order of magnitude, *i.e* `k` for thousands, `M` for millions, `B`for billions. You can also indicate the area covers by the provided data with an appropriate order of magnitude, either `ha` or `km2`. Please separate each element with a coma and a space: `, `.
+- `data`: indicate each modality available in your dataset *e.g.* `Aerial RGB`, `Multispectral`, `SAR`, `LiDAR PC` and so on. You can refer to our article, to the existing examples in OpenForest and to the pull request YAML file template for more details on the required formats.
+- `spatial_resolution_or_precision`: according to the same order than in the `data` attribute, indicate the associated spatial resolution or precision of each modality provided in the dataset. The measure unit depends on the modality, *e.g.* centimeters, meters, kilometers or number of points per meter squared for point clouds. Please separate each element withe coma and a space: `, `.
+- `time_series`: indicate `Yes` or `No`if your dataset contains a time series, note that it must be consistant with the `year_recordings` attribute.
+- `potential_tasks`: indicate the potential tasks that your dataset could be used for. It should belongs to the following list: `Align.`: alignment, `CD`: change detection, `Classif.`: classification, `IS`; instance segmentation, `KD`: key-point detection, `MC`: multi classification, `OD`: object detection, `OL`: object localization, `Reg.`: regression, `Seg.`: semantic segmentation. You can also push a new task with a pool request modifying the corresponding test after validation by an admnistrator. Please separate each element with a coma and a space: `, `.
+- `nb_classes`: indicate the number of classes in your datasets if applicable, `N/A` otherwise. You can also indicates the number of classes per `species`, `genus` and `family` while separating each element with a coma and a space: `, `.
+- `location`: indicate the countries in which your dataset is localized. The name of the countries should follow the `naturalearth_lowres` formatting from `geopandas`. It can be accessed by using the following command line: `geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))`. If your dataset is at the continent or world level, you can either indicate the name of the continent or `Worldwide`. Please separate each element with a coma and a space: `, `.
+- `url`: indate the url(s) to access your dataset. Please separate each element with a coma and a space: `, `.
+- `license`: indicate the license application to your dataset.
 Note that the file will be tested before merging to ensure that the format and typos are respected.
 
 3. Run tests locally to ensure the format of the file:

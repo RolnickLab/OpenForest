@@ -2,6 +2,7 @@
 pytest --dataset_file='PULL_REQUEST_TEMPLATE.yml' test_dataset_format.py
 """
 import yaml
+import requests
 import pandas as pd
 import geopandas as gpd
 import pytest
@@ -31,8 +32,14 @@ def test_index(new_dataset):
     except:
         KeyError('The dataset_name attribute is required.')
 
-def test_in_article(new_dataset):
-    assert new_dataset['in_article'] == False, "The in_article attribute should be set to 'No' or 'False'"
+def test_article_url(new_dataset):
+    url = new_dataset['article_url']
+    if url:
+        req = requests.head(url)
+        code = req.status_code
+        assert code == 200, 'The article url {} is not valid'.format(url)
+    else:
+        assert ValueError('The article_url attribute should contain the url to your article')
 
 def test_category(new_dataset):
     for _, letter in enumerate(new_dataset['category']):
@@ -121,10 +128,12 @@ def test_location(new_dataset):
             assert 0 in checker, 'The provided location: {} is not in the GeoPandas world country list'.format(location)
 
 def test_url(new_dataset):
-    url = new_dataset['url']
-    assert len(url) > 8, 'The url cannot be empty, please fill the entire url to access the dataset.'
-    # TODO: tests TDB
-    pass
+    urls = new_dataset['url'].split(', ')
+    for url in urls:
+        req = requests.head(url)
+        code = req.status_code
+        assert code == 200, 'The dataset url {} is not valid. In case of several urls, '\
+            'each one must be separated by a coma and a space.'.format(url)
 
 def test_license(new_dataset):
     # TODO: tests TDB
