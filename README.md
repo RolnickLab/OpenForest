@@ -10,7 +10,7 @@ Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera
 - The dataset should be open source, *i.e.* without any request requirement;
 - The dataset should be related to at least one published article, exceptions have been made for datasets that are available as preprints, but are considered to be must-see datasets;
 - The dataset should be focused on the composition of the forest, excluding event-based specific ones (*i.e.* wildfires detection);
-- A land use and/or land cover (LULC) dataset should contain more than a single `forest' class since a focus is made on better understanding the composition of the forest;
+- A land use and/or land cover (LULC) dataset should contain more than a single plant functional type (*i.e.* conifers or deciduous) since a focus is made on better understanding the composition of the forest;
 - The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra, root scans, dendro computer tomography)
 - The dataset should contained at least $O(1000)$ trees.
 
@@ -49,7 +49,7 @@ $ cp openforest/PULL_REQUEST_TEMPLATE.yml openforest/NEW_DATASET.yml
 - `category`: depending on the modality available in your dataset, please indicate one or several letters as following: `I` for inventories, `G` for ground-based recordings, `A` for aerial recordings, `S` for satellite recordings, `M` for maps. For more information, please refer to our article.
 - `year_publication`: indicate the year of the associated publication or preprint release.
 - `year_recordings`: indicate each year of data recording separated by `/`, *e.g.* `2019/2020`. If you want to indicate a time series, separate the two date bounds by `-`, *e.g.* `2010-2020`. You can include both time series and single dates such as `2009/2010-2020/2021`. Note that `Unknown` is a valid entry if the recording date is not available.
--`volume`: TODO
+- `dataset_size`: TODO
 - `data`: TODO
 - `spatial_resolution_or_precision`: TODO
 - `time_series`: TODO

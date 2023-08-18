@@ -4,7 +4,7 @@ in_article: No
 category: A
 year_publication: 2019
 year_recordings: Unknown
-volume: 21k samples
+dataset_size: 21k samples
 data: Aerial RGB
 spatial_resolution_or_precision: Unknown
 time_series: No

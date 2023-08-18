@@ -1,4 +1,4 @@
-dataset_name,in_article,category,year_publication,year_recordings,volume,data,spatial_resolution_or_precision,time_series,potential_tasks,nb_classes,location,url,license
+dataset_name,in_article,category,year_publication,year_recordings,dataset_size,data,spatial_resolution_or_precision,time_series,potential_tasks,nb_classes,location,url,license
 NeonTree Evaluation,Yes,AS,2021,2017/2018/2019,"8.5GB, 31K trees","Lidar PC, Aerial hypersp., Sat. RGB","5pts-m2, 1m, 10cm",No,"OD, Seg.",1,USA,"https://github.com/weecology/NeonTreeEvaluation/}{code}, https://zenodo.org/record/5914554}{data",CC-BY-4.0
 TreeSatAI,Yes,AS,2022,2011-2020/2015-2020,50K samples,"Aerial RGB, Satellite SAR, Sallite Multispec.","20cm, 10m, 10m",Yes,MC,20,Germany,"https://github.com/DFKI/treesatai_benchmark}{code}, https://zenodo.org/record/6778154",CC-BY-4.0
 Tallo,Yes,I,2022,Unknown,499K trees,"Location, Diameter, Height, Crown radius","100m, N/A, N/A, N/A",No,"OL, Classif., Reg.","5163 species, 1453 genera, 187 families",Worldwide,https://zenodo.org/record/6637599}{here},CC-BY-4.0

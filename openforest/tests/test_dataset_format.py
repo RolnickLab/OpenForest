@@ -63,7 +63,7 @@ def test_year_recordings(new_dataset):
                 assert 1970 <= int(years[1]) <= datetime.today().year, 'Year of publication is not valid.'
                 assert int(years[0]) < int(years[1]), 'First year should be < to second year in time series.'
 
-def test_volume(new_dataset):
+def test_dataset_size(new_dataset):
     # TODO: tests TBD
     pass
 

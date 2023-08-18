@@ -4,7 +4,7 @@ in_article: No
 category: AS
 year_publication: 2024
 year_recordings: 1995-2010/2021/2022/2023
-volume: 999M images, 999M km2
+dataset_size: 999M images, 999M km2
 data: Aerial RGB, SAR, Multispectral
 spatial_resolution_or_precision: 2cm, 10m, 10m
 time_series: Yes
