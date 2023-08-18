@@ -2,12 +2,12 @@
 
 ![openforest_logo](./images/logo_wo_background.png)
 
-OpenForest is an initiative to centralize open source forest monitoring dataset. This repository is open to contributions.
+OpenForest is an initiative to centralize open access forest monitoring dataset. This repository is open to contributions.
 It has been motivated by our work **OpenForest: A data catalogue for machine learning in forest monitoring** (link will be provided soon).
 
 Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera which are discussed in the corresponding article. If you want to add a new dataset, please ensure that it follows the same criteria before proceeding to the next stage.
 
-- The dataset should be open source, *i.e.* without any request requirement;
+- The dataset should be open access, *i.e.* without any request requirement;
 - The dataset should be related to at least one published article, exceptions have been made for datasets that are available as preprints, but are considered to be must-see datasets;
 - The dataset should be focused on the composition of the forest, excluding event-based specific ones (*i.e.* wildfires detection);
 - A land use and/or land cover (LULC) dataset should contain more than a single plant functional type (*i.e.* conifers or deciduous) since a focus is made on better understanding the composition of the forest;
