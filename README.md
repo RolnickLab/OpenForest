@@ -73,7 +73,7 @@ $ git checkout -b my-branch
 
 5. Update OpenForest with your new dataset and delete your YAML file after verifying that the update has been correctly done:
 ```bash
-$ python3 scripts/add_new_dataset.py --dataset_file='NEW_DATASET.yml'
+$ python scripts/add_new_dataset.py --dataset_file='NEW_DATASET.yml'
 $ rm NEW_DATASET.yml
 ```
 
@@ -105,7 +105,7 @@ $ bash tests/run_tests_to_modify.sh 'MODIFIED_DATASET.yml'
 
 If you pass the tests, run the following command line to remove the dataset, update OpenForest and delete your YAML file:
 ```bash
-$ python3 scripts/modify_dataset.py --dataset_file='MODIFIED_DATASET.yml'
+$ python scripts/modify_dataset.py --dataset_file='MODIFIED_DATASET.yml'
 $ rm MODIFIED_DATASET.yml
 ```
 
@@ -120,7 +120,7 @@ $ bash tests/run_tests_to_remove.sh 'Name of your dataset'
 
 If you pass the tests, run the following command line to remove the dataset and update OpenForest:
 ```bash
-$ python3 scripts/remove_dataset.py --dataset_name='Name of your dataset'
+$ python scripts/remove_dataset.py --dataset_name='Name of your dataset'
 ```
 
 3. Print the dataset row and URL(s) to access it:
@@ -128,7 +128,7 @@ $ python3 scripts/remove_dataset.py --dataset_name='Name of your dataset'
 You can print the dataset information, including the URL(s) to access it using the following command line:
 ```bash
 $ cd openforest/
-$ python3 scripts/print_dataset.py --dataset_name='Name of your dataset'
+$ python scripts/print_dataset.py --dataset_name='Name of your dataset'
 ```
 
 4. Commit your changes, push it to your branch and create a Pull Request:
