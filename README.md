@@ -2,7 +2,7 @@
 
 ![openforest_logo](./images/logo_wo_background.png)
 
-OpenForest is an initiative to centralize open access forest monitoring dataset. This repository is open to contributions.
+OpenForest is an initiative to centralize open access forest monitoring datasets. This repository is open to contributions.
 It has been motivated by our work **OpenForest: A data catalogue for machine learning in forest monitoring** (link will be provided soon).
 
 Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera which are discussed in the corresponding article. If you want to add a new dataset, please ensure that it follows the same criteria before proceeding to the next stage.
