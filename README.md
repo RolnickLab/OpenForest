@@ -11,8 +11,8 @@ Each one of the datasets listed in [OpenForest](./OpenForest.csv) follows these 
 - The dataset should be related to at least one published article, exceptions have been made for datasets that are available as preprints, but are considered to be must-see datasets;
 - The dataset should be focused on the composition of the forest, excluding event-based specific ones (*i.e.* wildfires detection);
 - A land use and/or land cover (LULC) dataset should contain more than a single plant functional type (*i.e.* conifers or deciduous) since a focus is made on better understanding the composition of the forest;
-- The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra or root scans)
-- The dataset should contained at least $O(1000)$ trees.
+- The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra or root scans);
+- The dataset should contain at least $O(1000)$ trees.
 
 The OpenForest catalogue is available in this location: [here](./OpenForest.csv).
 
