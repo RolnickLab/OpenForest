@@ -3,9 +3,9 @@
 ![openforest_logo](./images/logo_wo_background.png)
 
 OpenForest is an initiative to centralize open access forest monitoring datasets. This repository is open to contributions.
-It has been motivated by our work **OpenForest: A data catalogue for machine learning in forest monitoring** (link will be provided soon).
+It has been motivated by our work **[OpenForest: A data catalogue for machine learning in forest monitoring](https://arxiv.org/abs/2311.00277)**, ArXiv 2023.
 
-Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera which are discussed in the corresponding article. If you want to add a new dataset, please ensure that it follows the same criteria before proceeding to the next stage.
+Each one of the datasets listed in [OpenForest](./OpenForest.csv) follows these critera which are discussed in the corresponding article. If you want to add a new dataset, please ensure that it follows the same criteria before proceeding to the next stage.
 
 - The dataset should be open access, *i.e.* without any request requirement;
 - The dataset should be related to at least one published article, exceptions have been made for datasets that are available as preprints, but are considered to be must-see datasets;
@@ -14,7 +14,20 @@ Each the datasets listed in [OpenForest](./OpenForest.csv) follows these critera
 - The dataset should be at the tree level at least, excluding datasets at the organ or cellular level considered as out of the scope of this review (*e.g.* leaf spectra or root scans)
 - The dataset should contained at least $O(1000)$ trees.
 
-The OpenForest catalogue is available in this repo [here](./OpenForest.csv).
+The OpenForest catalogue is available in this location: [here](./OpenForest.csv).
+
+
+If you find this catalogue useful for your research, please cite [our paper](https://arxiv.org/abs/2311.00277):
+```
+@misc{ouaknine2023openforest,
+      title={OpenForest: A data catalogue for machine learning in forest monitoring}, 
+      author={Arthur Ouaknine and Teja Kattenborn and Etienne Laliberté and David Rolnick},
+      year={2023},
+      eprint={2311.00277},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+      }
+```
 
 ---
 
