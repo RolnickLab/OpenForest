@@ -43,7 +43,7 @@ $ git clone https://github.com/RolnickLab/OpenForest.git
 $ cd OpenForest/
 $ pip install -e .
 ```
-The pip installation will include all the dependencies of the [requirements](./requirements.txt) file. if not, you should install these dependancies manually using pip or conda.
+The pip installation will include all the dependencies of the [requirements](./requirements.txt) file. if not, you should install these dependencies manually using pip or conda.
 With this, you can edit the OpenForest code on the fly and import function and classes of OpenForest in other project as well.
 
 ---
