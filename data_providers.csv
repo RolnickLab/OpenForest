@@ -21,3 +21,5 @@ FIA,https://www.fia.fs.usda.gov/,US Forest Inventory Analysis
 MODIS/VIIR,https://firms.modaps.eosdis.nasa.gov/,Fire forest data in US / Canda using MODIS and VIIRS
 Mapbiomas,https://brasil.mapbiomas.org/en/collection-release,Mapbiomas Brasil is a platform to download land use and land cover maps
 ForestGeo,https://forestgeo.si.edu/,"Forest Global Earth Observatory (ForestGEO), data portal where network partners can login and enter, review, and download their data and other researchers can request access to any dataset"
+Swedish NFI,https://www.slu.se/en/Collaborative-Centres-and-Projects/the-swedish-national-forest-inventory/,"The Swedish National Forest Inventory groups many information on the volume of dead trees, tree biomass, tree density and many others. These data are aggregated in statistics per region in Sweden and are open access by querying the website."
+CREAF,https://laboratoriforestal.creaf.cat/,"The Catalonia Forest Inventory  provides processed data as interactive maps across various features such as biomass density, tree density and LiDAR coverage.The data are open access and can be downloaded by raster by querying the website."
