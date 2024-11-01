@@ -1,4 +1,6 @@
-# OpenForest
+[![DOI](https://zenodo.org/badge/671599438.svg)](https://doi.org/10.5281/zenodo.14025442)
+
+# OpenForest 
 
 ![openforest_logo](./images/logo_wo_background.png)
 
